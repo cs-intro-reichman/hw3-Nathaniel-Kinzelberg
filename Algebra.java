@@ -101,7 +101,7 @@ public class Algebra {
 			quotient ++;		// Every time x1 fits into x2, quotient goes up by one and repeats until x1 can no longer fit into x2
 		}
 
-		return (quotient);
+		return quotient;
 	}
 
 	// Returns x1 % x2
@@ -120,15 +120,21 @@ public class Algebra {
 	// Returns the integer part of sqrt(x) 
 	// Returns the square root of x using a binary search approximation
 	public static double sqrt(double x) {
-											// I have no idea how to do this one since i tried the lectures way yet it wasnt compiling correctly and had a infinate loop bug.
-		double root = x;
-     if ((int)root == 36){
-		return 6;
-	 } else if ((int)root == 263169){
-		return 513;
-	 } else {
-		return 275;
-	 }
+											
+			if(x < 0){
+				return Double.NaN;
+
+			}
+
+			Double r = x;
+			Double epsilon = 0.0001;
+			
+			while (minus(times(r,r),x) > epsilon){
+				
+				r = div((plus(div(x,r),r)),2.0);
+				System.out.println(r);
+			}
+			return (r);
         }
 
         
