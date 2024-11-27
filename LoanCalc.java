@@ -111,6 +111,7 @@ public class LoanCalc {
 			// If the balance is negative (overpaid), decrease the payment
 			else {
 				payment -= increment;
+				int y = 0;
 			}
 	
 			// If the balance is still far from zero, increase the increment

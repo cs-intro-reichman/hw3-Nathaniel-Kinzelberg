@@ -95,6 +95,7 @@ public class Algebra {
 	public static double div(double x1,double x2) {
   
 		int quotient = 0;
+		int x = 0;
 
 		while (x1 >= x2){
 			x1 = minus(x1,x2);
