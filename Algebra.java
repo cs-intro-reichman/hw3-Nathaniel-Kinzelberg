@@ -50,7 +50,7 @@ public class Algebra {
 		for (int j = 0; j < x2; j++) {
 			difference--;					// Takes an initial value x1 and subtracts 1 x2 amount of times
 		}
-		return difference;
+		return  (int) difference;
 	}
 
 	// Returns x1 * x2
@@ -102,7 +102,7 @@ public class Algebra {
 			quotient ++;		// Every time x1 fits into x2, quotient goes up by one and repeats until x1 can no longer fit into x2
 		}
 
-		return quotient;
+		return (int) quotient;
 	}
 
 	// Returns x1 % x2
@@ -130,10 +130,19 @@ public class Algebra {
 			Double r = x;
 			Double epsilon = 0.0001;
 			
-			while (minus(times(r,r),x) > epsilon){
+			while ((r*r - x) > epsilon || (r*r - x) < 0){
 				
-				r = div((plus(div(x,r),r)),2.0);
-				System.out.println(r);
+				r = (((x/r) + r) / 2.0);
+				
+				for (int i = 0 ; i < r ; i++){
+				if(i < r){
+					i++;
+				}
+				else{
+					return (i + 1);
+				}
+
+				}
 			}
 			return (r);
         }
