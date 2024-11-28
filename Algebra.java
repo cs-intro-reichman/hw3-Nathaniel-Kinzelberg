@@ -90,12 +90,10 @@ public class Algebra {
 
 		return (power);
 	}}
-int update = 0;
 	// Returns the integer part of x1 / x2 
 	public static double div(double x1,double x2) {
   
 		int quotient = 0;
-		int x = 0;
 
 		while (x1 >= x2){
 			x1 = minus(x1,x2);
@@ -128,7 +126,7 @@ int update = 0;
 			}
 
 			Double r = x;
-			Double epsilon = 0.0001;
+			Double epsilon = 0.001;
 			
 			while ((r*r - x) > epsilon || (r*r - x) < 0){
 				

@@ -8,7 +8,6 @@ public class LoanCalc {
     // Expects to get three command-line arguments: loan amount (double),
     // interest rate (double, as a percentage), and number of payments (int).  
 	public static void main(String[] args) {		
-		int update = 0;
 		// Gets the loan data
 		// double loan = Double.parseDouble(args[0]);
 		double loan = 100000;
@@ -119,7 +118,6 @@ public class LoanCalc {
 			// If the balance is negative (overpaid), decrease the payment
 			else {
 				payment -= increment;
-				int y = 0;
 			}
 	
 			// If the balance is still far from zero, increase the increment
