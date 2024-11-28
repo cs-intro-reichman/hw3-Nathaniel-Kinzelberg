@@ -90,7 +90,7 @@ public class Algebra {
 
 		return (power);
 	}}
-
+int update = 0;
 	// Returns the integer part of x1 / x2 
 	public static double div(double x1,double x2) {
   

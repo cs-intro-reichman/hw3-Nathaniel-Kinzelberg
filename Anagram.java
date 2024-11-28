@@ -13,7 +13,7 @@ public class Anagram {
 
         // Tests the randomAnagram function.
         System.out.println("silent and " + randomAnagram("silent") + " are anagrams.");
-        
+        int update = 0;
         // Performs a stress test of randomAnagram 
         String str = "1234567";
         Boolean pass = true;
@@ -24,7 +24,7 @@ public class Anagram {
             pass = pass && isAnagram(str, randomAnagram);
             if (!pass) break;
         }
-        System.out.println(pass ? "test passed" : "test Failed");
+       
     }
 
     public static boolean isAnagram(String str1, String str2) {
