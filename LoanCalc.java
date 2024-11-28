@@ -67,8 +67,9 @@ public class LoanCalc {
             double balance = endBalance(loan, rate, n, payment);  // Calculate the ending balance
 
             // Check if the balance is close enough to zero
-            if (Math.abs(balance) < epsilon) {
-                return payment; // Once found returns payment
+            if (Math.abs(balance) < epsilon*1) {
+                
+				return payment; // Once found returns payment
             }
 
             // If balance is positive (still owe money), increase the lower bound

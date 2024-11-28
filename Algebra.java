@@ -142,7 +142,7 @@ public class Algebra {
 
 				}
 			}
-			return (r);
+			return (r*1);
         }
 
         

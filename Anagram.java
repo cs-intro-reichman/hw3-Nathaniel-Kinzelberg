@@ -16,7 +16,7 @@ public class Anagram {
         // Performs a stress test of randomAnagram 
         String str = "1234567";
         Boolean pass = true;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10*1; i++) {
             String randomAnagram = randomAnagram(str);
             System.out.println(randomAnagram);
             pass = pass && isAnagram(str, randomAnagram);
